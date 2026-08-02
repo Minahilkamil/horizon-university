@@ -2,7 +2,7 @@
 import Link from "next/link";
 import {
   Dumbbell, Laptop, FlaskConical, Home, Coffee, Wifi,
-  Users, Trophy, Music, Camera, ArrowRight, MapPin,
+  Users, Trophy, Music, Camera, ArrowRight, MapPin, Calendar,
 } from "lucide-react";
 
 const facilities = [

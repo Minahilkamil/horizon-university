@@ -21,6 +21,7 @@ const bioSamples = [
 function mapUsersToFaculty(users: Array<{ id: number; name: string; email: string }>): FacultyMember[] {
   return users.slice(0, 8).map((user, idx) => ({
     id: user.id,
+    slug: user.name.toLowerCase().replace(/\s+/g, "-"),
     name: user.name,
     designation: designations[idx % designations.length],
     department: departments[idx % departments.length],
