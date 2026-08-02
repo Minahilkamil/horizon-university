@@ -5,6 +5,7 @@ import {
   ArrowLeft, BookOpen, Clock, Award, GraduationCap, ArrowRight, DollarSign, CheckCircle,
 } from "lucide-react";
 import { programs } from "@/data/programs";
+import { Button } from "@/components/ui/Button";
 
 export default async function ProgramDetail({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -102,9 +103,11 @@ export default async function ProgramDetail({ params }: { params: Promise<{ slug
                 </div>
 
                 <div className="mt-8">
-                  <Link href="/admissions" className="w-full px-8 py-4 rounded-2xl text-sm font-semibold inline-flex items-center justify-center text-white bg-blue-600">
-                    Apply Now
-                  </Link>
+                  <Button asChild variant="primary" size="lg" className="w-full">
+                    <Link href="/admissions">
+                      Apply Now
+                    </Link>
+                  </Button>
                 </div>
               </div>
             </div>

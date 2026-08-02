@@ -4,6 +4,7 @@
 import { useState } from "react";
 import { HelpCircle, Plus, Minus, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { Button } from "@/components/ui/Button";
 
 const faqs = [
   {
@@ -136,10 +137,12 @@ export default function FAQPage() {
           <div className="mt-20 p-10 rounded-3xl text-center bg-gray-900">
             <h3 className="text-xl font-bold mb-3 text-white">Still have questions?</h3>
             <p className="text-sm mb-6 text-white/60">Our admissions team is here to help you with anything you need.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl text-sm font-semibold text-white bg-blue-600">
-              Contact Us
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+            <Button asChild variant="primary" size="lg">
+              <Link href="/contact">
+                Contact Us
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>

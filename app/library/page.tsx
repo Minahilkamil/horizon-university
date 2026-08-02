@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { 
   BookOpen, Clock, Search, Users, Wifi, BookCheck 
 } from 'lucide-react';
+import { Button } from "@/components/ui/Button";
 
 export default function LibraryPage() {
   return (
@@ -79,9 +80,9 @@ export default function LibraryPage() {
                     placeholder="Search for books, journals, authors..." 
                     className="flex-1 px-5 py-3 rounded-xl text-sm outline-none bg-white border border-gray-300 text-gray-900 placeholder:text-gray-500" 
                   />
-                  <button className="px-6 py-3 rounded-xl text-sm font-semibold text-white bg-blue-600 flex items-center gap-2">
+                  <Button variant="primary">
                     <Search className="w-4 h-4" /> Search
-                  </button>
+                  </Button>
                 </div>
               </div>
             </div>

@@ -4,6 +4,7 @@ import {
   GraduationCap, Users, Award, Globe, Target, BookOpen,
   Microscope, TrendingUp, ArrowRight, Sparkles,
 } from "lucide-react";
+import { Button } from "@/components/ui/Button";
 
 const timeline = [
   { year: "1998", title: "Founded", desc: "Horizon University was established with a vision to deliver world-class education in Pakistan." },
@@ -198,13 +199,17 @@ export default function AboutPage() {
             Join 20,000+ students and alumni who chose Horizon University to shape their futures.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/admissions" className="px-8 py-4 rounded-2xl text-sm font-semibold bg-blue-600 text-white inline-flex items-center gap-2">
-              <span>Apply Now</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link href="/contact" className="px-8 py-4 rounded-2xl text-sm font-semibold text-white inline-flex items-center gap-2 border border-white/20">
-              Get in Touch
-            </Link>
+            <Button asChild variant="primary" size="lg">
+              <Link href="/admissions">
+                Apply Now
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </Button>
+            <Button asChild variant="outline" size="lg" className="text-white border-white/20 hover:text-white hover:bg-white/10 active:bg-white/20 focus-visible:ring-white/50 focus-visible:ring-offset-0">
+              <Link href="/contact">
+                Get in Touch
+              </Link>
+            </Button>
           </div>
         </div>
       </section>

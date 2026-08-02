@@ -3,6 +3,7 @@ import {
   Globe, Users, Home, ArrowRight, BookOpen, Calendar, 
   MapPin, Phone, Mail 
 } from 'lucide-react';
+import { Button } from "@/components/ui/Button";
 
 export default function InternationalPage() {
   return (
@@ -90,10 +91,12 @@ export default function InternationalPage() {
             For any questions about admissions, scholarships, or visa, please contact our international office.
           </p>
           <div className="flex flex-wrap justify-center gap-6">
-            <Link href="/contact" className="px-10 py-4 rounded-2xl text-sm font-semibold inline-flex items-center gap-2 text-white bg-blue-600">
-              Contact International Office
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+            <Button asChild variant="primary" size="lg">
+              <Link href="/contact">
+                Contact International Office
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>

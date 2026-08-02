@@ -2,6 +2,7 @@
 import { Building, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { departments } from "@/data/departments";
+import { Button } from "@/components/ui/Button";
 
 export default function DepartmentsPage() {
   return (
@@ -68,10 +69,12 @@ export default function DepartmentsPage() {
           <p className="text-base text-white/60 mb-8">
             Choose the department that aligns with your passions and career goals.
           </p>
-          <Link href="/admissions" className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl text-sm font-semibold text-white bg-blue-600">
-            Apply Now
-            <ArrowRight className="w-4 h-4" />
-          </Link>
+          <Button asChild variant="primary" size="lg">
+            <Link href="/admissions">
+              Apply Now
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </Button>
         </div>
       </section>
     </div>

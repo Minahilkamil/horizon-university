@@ -1,6 +1,7 @@
 
 import { Image, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { Button } from "@/components/ui/Button";
 
 const galleryImages = [
   {
@@ -114,10 +115,12 @@ export default function GalleryPage() {
           <p className="text-base text-white/60 mb-8">
             Schedule a campus tour and experience Horizon University in person.
           </p>
-          <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl text-sm font-semibold text-white bg-blue-600">
-            Schedule a Tour
-            <ArrowRight className="w-4 h-4" />
-          </Link>
+          <Button asChild variant="primary" size="lg">
+            <Link href="/contact">
+              Schedule a Tour
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </Button>
         </div>
       </section>
     </div>

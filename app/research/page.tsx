@@ -1,6 +1,7 @@
 
 import { FlaskConical, Award, Users, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { Button } from "@/components/ui/Button";
 
 const stats = [
   { label: "Research Publications", value: "1500+" },
@@ -130,10 +131,12 @@ export default function ResearchPage() {
           <p className="text-base text-white/60 mb-8">
             Undergraduate and graduate students can participate in cutting-edge research projects from their first year.
           </p>
-          <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl text-sm font-semibold text-white bg-blue-600">
-            Explore Opportunities
-            <ArrowRight className="w-4 h-4" />
-          </Link>
+          <Button asChild variant="primary" size="lg">
+            <Link href="/contact">
+              Explore Opportunities
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </Button>
         </div>
       </section>
     </div>

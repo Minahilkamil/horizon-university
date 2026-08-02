@@ -3,6 +3,7 @@ import {
   BookOpen, Calendar, CheckCircle, Award, User, 
   DollarSign, ArrowRight 
 } from 'lucide-react';
+import { Button } from "@/components/ui/Button";
 
 export default function StudentPortal() {
   return (
@@ -54,10 +55,10 @@ export default function StudentPortal() {
           </div>
 
           <div className="text-center">
-            <button className="px-10 py-4 rounded-2xl text-sm font-semibold inline-flex items-center gap-2 text-white bg-blue-600">
+            <Button variant="primary" size="lg">
               Login to Portal
               <ArrowRight className="w-4 h-4" />
-            </button>
+            </Button>
           </div>
         </div>
       </section>

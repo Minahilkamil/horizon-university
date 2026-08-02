@@ -4,6 +4,7 @@ import {
   ArrowLeft, Calendar, Clock, MapPin, ArrowRight 
 } from 'lucide-react';
 import { events as allEvents } from '@/data/events';
+import { Button } from "@/components/ui/Button";
 
 export default function EventDetail({ params }: { params: { slug: string } }) {
   const event = allEvents.find(p => p.slug === params.slug);
@@ -61,10 +62,10 @@ export default function EventDetail({ params }: { params: { slug: string } }) {
           </div>
           
           <div className="mt-10">
-            <button className="px-8 py-4 rounded-2xl text-sm font-semibold inline-flex items-center gap-2 text-white bg-blue-600">
+            <Button variant="primary" size="lg">
               Register Now
               <ArrowRight className="w-4 h-4" />
-            </button>
+            </Button>
           </div>
         </div>
       </section>

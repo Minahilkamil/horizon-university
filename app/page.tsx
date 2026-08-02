@@ -9,6 +9,7 @@ import {
   Star,
   CheckCircle2,
 } from "lucide-react";
+import { Button } from "@/components/ui/Button";
 
 const programs = [
   {
@@ -95,14 +96,18 @@ export default function HomePage() {
             </p>
 
             <div className="flex flex-wrap gap-6 justify-center">
-              <Link href="/programs" className="px-10 py-4 rounded-xl text-sm font-semibold bg-blue-600 text-white inline-flex items-center gap-2">
-                Explore Programs
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-              <Link href="/admissions" className="px-10 py-4 rounded-xl text-sm font-semibold text-white inline-flex items-center gap-2 border border-white/30">
-                Apply Now
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+              <Button asChild variant="primary" size="lg">
+                <Link href="/programs">
+                  Explore Programs
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="text-white border-white/30 hover:text-white hover:bg-white/10 active:bg-white/20 focus-visible:ring-white/50 focus-visible:ring-offset-0">
+                <Link href="/admissions">
+                  Apply Now
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </Button>
             </div>
           </div>
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent z-10" />
@@ -156,10 +161,12 @@ export default function HomePage() {
                 ))}
               </ul>
               <div className="pt-4">
-                <Link href="/about" className="px-8 py-3 rounded-xl text-sm font-semibold bg-blue-600 text-white inline-flex items-center gap-2">
-                  Learn More
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
+                <Button asChild variant="primary" size="md">
+                  <Link href="/about">
+                    Learn More
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </Button>
               </div>
             </div>
 
@@ -203,10 +210,12 @@ export default function HomePage() {
           </div>
 
           <div className="text-center mt-12">
-            <Link href="/programs" className="px-10 py-4 rounded-xl text-sm font-semibold bg-blue-600 text-white inline-flex items-center gap-2">
-              View All Programs
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+            <Button asChild variant="primary" size="lg">
+              <Link href="/programs">
+                View All Programs
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -254,14 +263,18 @@ export default function HomePage() {
             Applications are now open for Fall 2026. Join thousands of students who have chosen Horizon University to build their future.
           </p>
           <div className="flex flex-wrap gap-6 justify-center">
-            <Link href="/admissions" className="px-10 py-4 rounded-xl text-sm font-semibold bg-blue-600 text-white inline-flex items-center gap-2">
-              Apply Now
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link href="/contact" className="px-10 py-4 rounded-xl text-sm font-semibold text-white inline-flex items-center gap-2 border border-white/30">
-              Contact Us
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+            <Button asChild variant="primary" size="lg">
+              <Link href="/admissions">
+                Apply Now
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </Button>
+            <Button asChild variant="outline" size="lg" className="text-white border-white/30 hover:text-white hover:bg-white/10 active:bg-white/20 focus-visible:ring-white/50 focus-visible:ring-offset-0">
+              <Link href="/contact">
+                Contact Us
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>

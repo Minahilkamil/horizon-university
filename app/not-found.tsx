@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Home, ArrowLeft } from "lucide-react";
+import { Button } from "@/components/ui/Button";
 
 export default function NotFound() {
   return (
@@ -18,14 +19,16 @@ export default function NotFound() {
             The page you're looking for doesn't exist or has been moved. Let's get you back on track.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/" className="px-8 py-3.5 rounded-2xl text-sm font-semibold bg-blue-600 text-white inline-flex items-center gap-2">
-              <Home className="w-4 h-4" />
-              Back to Home
-            </Link>
-            <button onClick={() => window.history.back()} className="px-8 py-3.5 rounded-2xl text-sm font-semibold text-gray-900 inline-flex items-center gap-2 border border-gray-200">
+            <Button asChild variant="primary">
+              <Link href="/">
+                <Home className="w-4 h-4" />
+                Back to Home
+              </Link>
+            </Button>
+            <Button variant="secondary" onClick={() => window.history.back()}>
               <ArrowLeft className="w-4 h-4" />
               Go Back
-            </button>
+            </Button>
           </div>
         </div>
       </div>

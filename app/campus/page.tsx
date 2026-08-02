@@ -4,6 +4,7 @@ import {
   Dumbbell, Laptop, FlaskConical, Home, Coffee, Wifi,
   Users, Trophy, Music, Camera, ArrowRight, MapPin, Calendar,
 } from "lucide-react";
+import { Button } from "@/components/ui/Button";
 
 const facilities = [
   {
@@ -177,10 +178,12 @@ export default function CampusPage() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <Link href="/events" className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl text-sm font-semibold text-white bg-blue-600">
-              View All Events
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+            <Button asChild variant="primary" size="lg">
+              <Link href="/events">
+                View All Events
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -213,13 +216,17 @@ export default function CampusPage() {
             Book a campus tour or attend an open day and see why students love life at Horizon.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/contact" className="px-8 py-4 rounded-2xl text-sm font-semibold bg-blue-600 text-white inline-flex items-center gap-2">
-              <span>Book a Tour</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link href="/admissions" className="px-8 py-4 rounded-2xl text-sm font-semibold text-white inline-flex items-center gap-2 border border-white/20">
-              Apply Now
-            </Link>
+            <Button asChild variant="primary" size="lg">
+              <Link href="/contact">
+                Book a Tour
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </Button>
+            <Button asChild variant="outline" size="lg" className="text-white border-white/20 hover:text-white hover:bg-white/10 active:bg-white/20 focus-visible:ring-white/50 focus-visible:ring-offset-0">
+              <Link href="/admissions">
+                Apply Now
+              </Link>
+            </Button>
           </div>
         </div>
       </section>

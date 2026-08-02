@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import {
   GraduationCap, CheckCircle, ArrowRight, ArrowLeft, Upload, BookOpen, AlertCircle,
 } from "lucide-react";
+import { Button } from "@/components/ui/Button";
 
 type FormData = {
   firstName: string; lastName: string; email: string; phone: string;
@@ -257,18 +258,18 @@ export default function AdmissionsPage() {
 
                 <div className="flex items-center justify-between mt-8 pt-6 border-t border-gray-200">
                   {step > 0 ? (
-                    <button type="button" onClick={() => setStep(step - 1)} className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium text-gray-900 border border-gray-200">
+                    <Button variant="secondary" type="button" onClick={() => setStep(step - 1)}>
                       <ArrowLeft className="w-4 h-4" /> Back
-                    </button>
+                    </Button>
                   ) : <div />}
                   {step < steps.length - 1 ? (
-                    <button type="button" onClick={() => setStep(step + 1)} className="flex items-center gap-2 px-6 py-2.5 rounded-xl text-sm font-semibold text-white bg-blue-600">
+                    <Button variant="primary" type="button" onClick={() => setStep(step + 1)}>
                       Continue <ArrowRight className="w-4 h-4" />
-                    </button>
+                    </Button>
                   ) : (
-                    <button type="submit" className="flex items-center gap-2 px-6 py-2.5 rounded-xl text-sm font-semibold text-white bg-green-600">
+                    <Button variant="success" type="submit">
                       <CheckCircle className="w-4 h-4" /> Submit Application
-                    </button>
+                    </Button>
                   )}
                 </div>
               </form>
