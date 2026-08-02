@@ -5,6 +5,7 @@ import {
   User, Book, Award, ArrowLeft, Mail, Calendar, Clock
 } from 'lucide-react';
 import { faculty } from '@/data/faculty';
+import { Card } from "@/components/ui/Card";
 
 export default async function FacultyProfile({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -32,14 +33,14 @@ export default async function FacultyProfile({ params }: { params: Promise<{ slu
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Sidebar */}
             <div className="space-y-6">
-              <div className="rounded-3xl overflow-hidden border border-gray-200">
+              <Card className="rounded-3xl overflow-hidden border border-gray-200">
                 <img
                   src={member.image}
                   alt={member.name}
                   className="w-full aspect-square object-cover"
                 />
-              </div>
-              <div className="p-6 rounded-3xl bg-gray-50 border border-gray-200">
+              </Card>
+              <Card className="p-6 rounded-3xl bg-gray-50 border border-gray-200">
                 <h3 className="text-sm font-semibold uppercase tracking-wider mb-4 text-gray-500">Contact</h3>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3 text-sm text-gray-600">
@@ -51,7 +52,7 @@ export default async function FacultyProfile({ params }: { params: Promise<{ slu
                     <span>Office Hours: {member.officeHours}</span>
                   </div>
                 </div>
-              </div>
+              </Card>
             </div>
 
             {/* Main Content */}

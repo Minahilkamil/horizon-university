@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { BookOpen, Calendar, ArrowRight } from "lucide-react";
 import { blogPosts } from "@/data/blog";
+import { Card } from "@/components/ui/Card";
 
 export default function BlogPage() {
   return (
@@ -26,7 +27,7 @@ export default function BlogPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post) => (
               <Link href={`/blog/${post.slug}`} key={post.id} className="group">
-                <div className="rounded-3xl overflow-hidden h-full bg-gray-50 border border-gray-200">
+                <Card className="rounded-3xl overflow-hidden h-full bg-gray-50 border border-gray-200">
                   <div className="aspect-video overflow-hidden">
                     <img src={post.image} alt={post.title} className="w-full h-full object-cover" loading="lazy" />
                   </div>
@@ -46,7 +47,7 @@ export default function BlogPage() {
                       <ArrowRight className="w-4 h-4" />
                     </span>
                   </div>
-                </div>
+                </Card>
               </Link>
             ))}
           </div>

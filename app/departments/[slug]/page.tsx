@@ -11,6 +11,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { departments } from "@/data/departments";
+import { Card } from "@/components/ui/Card";
 
 export default async function DepartmentDetail({
   params,
@@ -59,14 +60,14 @@ export default async function DepartmentDetail({
                 </h2>
                 <div className="grid md:grid-cols-2 gap-4">
                   {dept.programs.map((program, i) => (
-                    <div
+                    <Card
                       key={i}
                       className="p-6 rounded-2xl bg-gray-50 border border-gray-200"
                     >
                       <div className="font-semibold text-base text-gray-900">
                         {program}
                       </div>
-                    </div>
+                    </Card>
                   ))}
                 </div>
               </div>
@@ -79,14 +80,14 @@ export default async function DepartmentDetail({
                 </h2>
                 <div className="grid md:grid-cols-2 gap-4">
                   {dept.labs.map((lab, i) => (
-                    <div
+                    <Card
                       key={i}
                       className="p-6 rounded-2xl bg-gray-50 border border-gray-200"
                     >
                       <div className="font-semibold text-base text-gray-900">
                         {lab}
                       </div>
-                    </div>
+                    </Card>
                   ))}
                 </div>
               </div>
@@ -99,13 +100,13 @@ export default async function DepartmentDetail({
                 </h2>
                 <ul className="space-y-4">
                   {dept.achievements.map((achievement, i) => (
-                    <li
+                    <Card
                       key={i}
                       className="flex items-start gap-3 p-4 rounded-2xl bg-gray-50 border border-gray-200"
                     >
                       <div className="mt-1 text-blue-600 font-bold">•</div>
                       <div className="text-base text-gray-600">{achievement}</div>
-                    </li>
+                    </Card>
                   ))}
                 </ul>
               </div>
@@ -114,7 +115,7 @@ export default async function DepartmentDetail({
             {/* Right Column */}
             <div className="space-y-8">
               {/* Stats Card */}
-              <div className="p-8 rounded-3xl bg-gray-50 border border-gray-200 sticky top-32">
+              <Card className="p-8 rounded-3xl bg-gray-50 border border-gray-200 sticky top-32">
                 <h3 className="text-lg font-bold mb-6 text-gray-900">
                   Department Stats
                 </h3>
@@ -157,7 +158,7 @@ export default async function DepartmentDetail({
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
-              </div>
+              </Card>
             </div>
           </div>
         </div>

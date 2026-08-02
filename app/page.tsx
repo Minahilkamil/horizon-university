@@ -10,6 +10,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { Card } from "@/components/ui/Card";
 
 const programs = [
   {
@@ -117,7 +118,7 @@ export default function HomePage() {
       {/* Stats Section */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="bg-gray-50 rounded-2xl p-8 grid grid-cols-2 md:grid-cols-4 gap-8 border border-gray-200">
+          <Card className="bg-gray-50 rounded-2xl p-8 grid grid-cols-2 md:grid-cols-4 gap-8 border border-gray-200">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
                 <div className="w-12 h-12 rounded-xl mx-auto mb-4 flex items-center justify-center bg-blue-100 text-blue-600">
@@ -129,7 +130,7 @@ export default function HomePage() {
                 <p className="text-sm text-gray-500">{stat.label}</p>
               </div>
             ))}
-          </div>
+          </Card>
         </div>
       </section>
 
@@ -192,7 +193,7 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
             {programs.map((program) => (
-              <div key={program.title} className="bg-gray-50 p-8 h-full rounded-2xl border border-gray-200">
+              <Card key={program.title} className="bg-gray-50 p-8 h-full rounded-2xl border border-gray-200">
                 <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 bg-blue-600 text-white">
                   <div>{program.icon}</div>
                 </div>
@@ -205,7 +206,7 @@ export default function HomePage() {
                 <Link href={program.link} className="text-sm font-semibold inline-flex items-center gap-2 text-blue-600">
                   Learn More <ArrowRight className="w-4 h-4" />
                 </Link>
-              </div>
+              </Card>
             ))}
           </div>
 
@@ -231,7 +232,7 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-3 gap-8 mt-12">
             {testimonials.map((testimonial) => (
-              <div key={testimonial.name} className="bg-white p-8 h-full rounded-2xl border border-gray-200">
+              <Card key={testimonial.name} className="bg-white p-8 h-full rounded-2xl border border-gray-200">
                 <div className="flex gap-1 mb-6">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
@@ -247,7 +248,7 @@ export default function HomePage() {
                     <p className="text-sm text-gray-500">{testimonial.role}</p>
                   </div>
                 </div>
-              </div>
+              </Card>
             ))}
           </div>
         </div>

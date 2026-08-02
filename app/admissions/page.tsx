@@ -7,6 +7,7 @@ import {
   GraduationCap, CheckCircle, ArrowRight, ArrowLeft, Upload, BookOpen, AlertCircle,
 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { Card } from "@/components/ui/Card";
 
 type FormData = {
   firstName: string; lastName: string; email: string; phone: string;
@@ -69,14 +70,14 @@ export default function AdmissionsPage() {
                          style={{ background: item.done ? "#2563EB" : "#f3f4f6", border: `2px solid ${item.done ? "#2563EB" : "#e5e7eb"}` }}>
                       {item.done ? <CheckCircle className="w-5 h-5 text-white" /> : <span className="text-sm font-bold text-gray-500">{i + 1}</span>}
                     </div>
-                    <div className="p-5 rounded-2xl flex-1 bg-gray-50 border border-gray-200">
+                    <Card className="p-5 rounded-2xl flex-1 bg-gray-50 border border-gray-200">
                       <div className="flex items-center gap-3 mb-1">
                         <span className="text-xs font-semibold text-blue-600">{item.date}</span>
                         {item.done && <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-green-50 text-green-600">Completed</span>}
                       </div>
                       <h3 className="text-base font-bold text-gray-900">{item.title}</h3>
                       <p className="text-sm text-gray-600">{item.desc}</p>
-                    </div>
+                    </Card>
                   </div>
                 ))}
             </div>
@@ -94,7 +95,7 @@ export default function AdmissionsPage() {
           </div>
 
           {submitted ? (
-            <div className="text-center p-12 rounded-3xl bg-white border border-gray-200">
+            <Card className="text-center p-12 rounded-3xl bg-white border border-gray-200">
               <div className="w-20 h-20 rounded-full mx-auto mb-6 flex items-center justify-center bg-green-600">
                 <CheckCircle className="w-10 h-10 text-white" />
               </div>
@@ -103,9 +104,9 @@ export default function AdmissionsPage() {
                 Thank you for applying to Horizon University. We'll review your application and get back to you within 5 business days.
               </p>
               <p className="text-xs text-gray-500">Reference: HU-2026-{Math.floor(Math.random() * 9000 + 1000)}</p>
-            </div>
+            </Card>
           ) : (
-            <div className="p-8 md:p-10 rounded-3xl bg-white border border-gray-200">
+            <Card className="p-8 md:p-10 rounded-3xl bg-white border border-gray-200">
               {/* Progress */}
               <div className="flex items-center gap-2 mb-10">
                 {steps.map((s, i) => (
@@ -273,7 +274,7 @@ export default function AdmissionsPage() {
                   )}
                 </div>
               </form>
-            </div>
+            </Card>
           )}
         </div>
       </section>
@@ -286,7 +287,7 @@ export default function AdmissionsPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Tuition & Fees</h2>
             <p className="text-gray-600">Transparent fee structure for all programs (PKR).</p>
           </div>
-          <div className="rounded-2xl overflow-hidden border border-gray-200">
+          <Card className="rounded-2xl overflow-hidden border border-gray-200">
             <table className="w-full text-sm">
               <thead>
                 <tr className="bg-gray-50">
@@ -312,7 +313,7 @@ export default function AdmissionsPage() {
                 ))}
               </tbody>
             </table>
-          </div>
+          </Card>
         </div>
       </section>
     </div>

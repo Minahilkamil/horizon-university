@@ -5,6 +5,7 @@ import {
   Users, Trophy, Music, Camera, ArrowRight, MapPin, Calendar,
 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { Card } from "@/components/ui/Card";
 
 const facilities = [
   {
@@ -114,7 +115,7 @@ export default function CampusPage() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {facilities.map((f, i) => (
-              <div key={f.name} className="rounded-2xl overflow-hidden h-full flex flex-col bg-gray-50 border border-gray-200">
+              <Card key={f.name} className="rounded-2xl overflow-hidden h-full flex flex-col bg-gray-50 border border-gray-200">
                 <div className="aspect-video overflow-hidden">
                   <img src={f.image} alt={f.name} className="w-full h-full object-cover" loading="lazy" />
                 </div>
@@ -125,7 +126,7 @@ export default function CampusPage() {
                   <h3 className="text-base font-bold mb-2 text-gray-900">{f.name}</h3>
                   <p className="text-sm leading-relaxed flex-1 text-gray-600">{f.desc}</p>
                 </div>
-              </div>
+              </Card>
             ))}
           </div>
         </div>
@@ -141,13 +142,13 @@ export default function CampusPage() {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             {societies.map((s, i) => (
-              <div key={s.name} className="p-5 rounded-2xl text-center bg-white border border-gray-200">
+              <Card key={s.name} className="p-5 rounded-2xl text-center bg-white border border-gray-200">
                 <div className="w-11 h-11 rounded-xl mx-auto mb-3 flex items-center justify-center bg-blue-100 text-blue-600">
                   {s.icon}
                 </div>
                 <h3 className="text-sm font-bold text-gray-900">{s.name}</h3>
                 <p className="text-xs mt-1 text-gray-500">{s.members} members</p>
-              </div>
+              </Card>
             ))}
           </div>
         </div>
@@ -163,7 +164,7 @@ export default function CampusPage() {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {events.map((ev, i) => (
-              <div key={ev.title} className="rounded-2xl overflow-hidden bg-gray-50 border border-gray-200 h-full flex flex-col">
+              <Card key={ev.title} className="rounded-2xl overflow-hidden bg-gray-50 border border-gray-200 h-full flex flex-col">
                 <div className="aspect-video overflow-hidden">
                   <img src={ev.image} alt={ev.title} className="w-full h-full object-cover" loading="lazy" />
                 </div>
@@ -174,7 +175,7 @@ export default function CampusPage() {
                   <h3 className="text-base font-bold mb-2 text-gray-900">{ev.title}</h3>
                   <p className="text-sm leading-relaxed flex-1 text-gray-600">{ev.desc}</p>
                 </div>
-              </div>
+              </Card>
             ))}
           </div>
           <div className="text-center mt-12">

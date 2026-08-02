@@ -5,6 +5,7 @@ import { useState } from "react";
 import { HelpCircle, Plus, Minus, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
+import { Card } from "@/components/ui/Card";
 
 const faqs = [
   {
@@ -105,7 +106,7 @@ export default function FAQPage() {
                     const key = `${section.category}-${idx}`;
                     const isOpen = openIndex === key;
                     return (
-                      <div
+                      <Card
                         key={idx}
                         className="rounded-2xl overflow-hidden bg-gray-50 border border-gray-200"
                       >
@@ -125,7 +126,7 @@ export default function FAQPage() {
                             {item.a}
                           </div>
                         )}
-                      </div>
+                      </Card>
                     );
                   })}
                 </div>
@@ -134,7 +135,7 @@ export default function FAQPage() {
           </div>
 
           {/* Still have questions */}
-          <div className="mt-20 p-10 rounded-3xl text-center bg-gray-900">
+          <Card className="mt-20 p-10 rounded-3xl text-center bg-gray-900 border-0">
             <h3 className="text-xl font-bold mb-3 text-white">Still have questions?</h3>
             <p className="text-sm mb-6 text-white/60">Our admissions team is here to help you with anything you need.</p>
             <Button asChild variant="primary" size="lg">
@@ -143,7 +144,7 @@ export default function FAQPage() {
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </Button>
-          </div>
+          </Card>
         </div>
       </section>
     </div>

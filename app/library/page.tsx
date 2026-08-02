@@ -3,6 +3,7 @@ import {
   BookOpen, Clock, Search, Users, Wifi, BookCheck 
 } from 'lucide-react';
 import { Button } from "@/components/ui/Button";
+import { Card } from "@/components/ui/Card";
 
 export default function LibraryPage() {
   return (
@@ -23,57 +24,57 @@ export default function LibraryPage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            <div className="p-8 rounded-3xl bg-gray-50 border border-gray-200 text-center">
+            <Card className="p-8 rounded-3xl bg-gray-50 border border-gray-200 text-center">
               <div className="w-14 h-14 rounded-2xl mx-auto mb-4 flex items-center justify-center bg-blue-100 text-blue-600">
                 <BookOpen className="w-7 h-7" />
               </div>
               <h3 className="text-lg font-bold mb-2 text-gray-900">100,000+ Books</h3>
               <p className="text-sm text-gray-600">Physical and digital books available.</p>
-            </div>
-            <div className="p-8 rounded-3xl bg-gray-50 border border-gray-200 text-center">
+            </Card>
+            <Card className="p-8 rounded-3xl bg-gray-50 border border-gray-200 text-center">
               <div className="w-14 h-14 rounded-2xl mx-auto mb-4 flex items-center justify-center bg-blue-100 text-blue-600">
                 <Wifi className="w-7 h-7" />
               </div>
               <h3 className="text-lg font-bold mb-2 text-gray-900">Digital Archives</h3>
               <p className="text-sm text-gray-600">Online journals and research databases.</p>
-            </div>
-            <div className="p-8 rounded-3xl bg-gray-50 border border-gray-200 text-center">
+            </Card>
+            <Card className="p-8 rounded-3xl bg-gray-50 border border-gray-200 text-center">
               <div className="w-14 h-14 rounded-2xl mx-auto mb-4 flex items-center justify-center bg-blue-100 text-blue-600">
                 <Users className="w-7 h-7" />
               </div>
               <h3 className="text-lg font-bold mb-2 text-gray-900">Study Spaces</h3>
               <p className="text-sm text-gray-600">Quiet zones and group study rooms.</p>
-            </div>
-            <div className="p-8 rounded-3xl bg-gray-50 border border-gray-200 text-center">
+            </Card>
+            <Card className="p-8 rounded-3xl bg-gray-50 border border-gray-200 text-center">
               <div className="w-14 h-14 rounded-2xl mx-auto mb-4 flex items-center justify-center bg-blue-100 text-blue-600">
                 <Clock className="w-7 h-7" />
               </div>
               <h3 className="text-lg font-bold mb-2 text-gray-900">Long Hours</h3>
               <p className="text-sm text-gray-600">Open 7 days a week from 8AM to 10PM.</p>
-            </div>
+            </Card>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <h2 className="text-2xl font-bold mb-6 text-gray-900">Services</h2>
               <ul className="space-y-4">
-                <li className="flex items-start gap-3 p-4 rounded-2xl bg-gray-50 border border-gray-200">
+                <Card className="flex items-start gap-3 p-4 rounded-2xl bg-gray-50 border border-gray-200">
                   <BookCheck className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
                   <span className="text-base text-gray-700">Book borrowing and returns</span>
-                </li>
-                <li className="flex items-start gap-3 p-4 rounded-2xl bg-gray-50 border border-gray-200">
+                </Card>
+                <Card className="flex items-start gap-3 p-4 rounded-2xl bg-gray-50 border border-gray-200">
                   <BookCheck className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
                   <span className="text-base text-gray-700">Inter-library loans</span>
-                </li>
-                <li className="flex items-start gap-3 p-4 rounded-2xl bg-gray-50 border border-gray-200">
+                </Card>
+                <Card className="flex items-start gap-3 p-4 rounded-2xl bg-gray-50 border border-gray-200">
                   <BookCheck className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
                   <span className="text-base text-gray-700">Research assistance</span>
-                </li>
+                </Card>
               </ul>
             </div>
             <div>
               <h2 className="text-2xl font-bold mb-6 text-gray-900">Search the Catalog</h2>
-              <div className="p-8 rounded-3xl bg-gray-50 border border-gray-200">
+              <Card className="p-8 rounded-3xl bg-gray-50 border border-gray-200">
                 <div className="flex gap-3">
                   <input 
                     type="text" 
@@ -84,7 +85,7 @@ export default function LibraryPage() {
                     <Search className="w-4 h-4" /> Search
                   </Button>
                 </div>
-              </div>
+              </Card>
             </div>
           </div>
         </div>

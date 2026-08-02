@@ -4,6 +4,7 @@ import {
   DollarSign, ArrowRight 
 } from 'lucide-react';
 import { Button } from "@/components/ui/Button";
+import { Card } from "@/components/ui/Card";
 
 export default function StudentPortal() {
   return (
@@ -24,34 +25,34 @@ export default function StudentPortal() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            <div className="p-8 rounded-3xl bg-gray-50 border border-gray-200 text-center">
+            <Card className="p-8 rounded-3xl bg-gray-50 border border-gray-200 text-center">
               <div className="w-14 h-14 rounded-2xl mx-auto mb-4 flex items-center justify-center bg-blue-100 text-blue-600">
                 <User className="w-7 h-7" />
               </div>
               <h3 className="text-lg font-bold mb-2 text-gray-900">Profile</h3>
               <p className="text-sm text-gray-600">View and edit your personal information.</p>
-            </div>
-            <div className="p-8 rounded-3xl bg-gray-50 border border-gray-200 text-center">
+            </Card>
+            <Card className="p-8 rounded-3xl bg-gray-50 border border-gray-200 text-center">
               <div className="w-14 h-14 rounded-2xl mx-auto mb-4 flex items-center justify-center bg-blue-100 text-blue-600">
                 <BookOpen className="w-7 h-7" />
               </div>
               <h3 className="text-lg font-bold mb-2 text-gray-900">Courses</h3>
               <p className="text-sm text-gray-600">View your enrolled courses and materials.</p>
-            </div>
-            <div className="p-8 rounded-3xl bg-gray-50 border border-gray-200 text-center">
+            </Card>
+            <Card className="p-8 rounded-3xl bg-gray-50 border border-gray-200 text-center">
               <div className="w-14 h-14 rounded-2xl mx-auto mb-4 flex items-center justify-center bg-blue-100 text-blue-600">
                 <Award className="w-7 h-7" />
               </div>
               <h3 className="text-lg font-bold mb-2 text-gray-900">Grades</h3>
               <p className="text-sm text-gray-600">Check your academic performance.</p>
-            </div>
-            <div className="p-8 rounded-3xl bg-gray-50 border border-gray-200 text-center">
+            </Card>
+            <Card className="p-8 rounded-3xl bg-gray-50 border border-gray-200 text-center">
               <div className="w-14 h-14 rounded-2xl mx-auto mb-4 flex items-center justify-center bg-blue-100 text-blue-600">
                 <Calendar className="w-7 h-7" />
               </div>
               <h3 className="text-lg font-bold mb-2 text-gray-900">Schedule</h3>
               <p className="text-sm text-gray-600">View your timetable and class schedule.</p>
-            </div>
+            </Card>
           </div>
 
           <div className="text-center">

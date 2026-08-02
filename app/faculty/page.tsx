@@ -2,6 +2,7 @@
 import { Users, Award, BookOpen, GraduationCap, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { faculty } from "@/data/faculty";
+import { Card } from "@/components/ui/Card";
 
 const stats = [
   { label: "Faculty Members", value: "250+" },
@@ -79,27 +80,27 @@ export default function FacultyPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Teaching with Purpose</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-8 rounded-3xl bg-gray-50 border border-gray-200">
+            <Card className="p-8 rounded-3xl bg-gray-50 border border-gray-200">
               <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-blue-100 text-blue-600">
                 <GraduationCap className="w-6 h-6" />
               </div>
               <h3 className="text-base font-bold mb-3 text-gray-900">Accessible Mentorship</h3>
               <p className="text-sm leading-relaxed text-gray-600">Open door policy ensures students have direct access to professors for guidance and research opportunities.</p>
-            </div>
-            <div className="p-8 rounded-3xl bg-gray-50 border border-gray-200">
+            </Card>
+            <Card className="p-8 rounded-3xl bg-gray-50 border border-gray-200">
               <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-blue-100 text-blue-600">
                 <Award className="w-6 h-6" />
               </div>
               <h3 className="text-base font-bold mb-3 text-gray-900">Research Excellence</h3>
               <p className="text-sm leading-relaxed text-gray-600">Faculty actively publish in top journals and involve students in cutting-edge research projects.</p>
-            </div>
-            <div className="p-8 rounded-3xl bg-gray-50 border border-gray-200">
+            </Card>
+            <Card className="p-8 rounded-3xl bg-gray-50 border border-gray-200">
               <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-blue-100 text-blue-600">
                 <BookOpen className="w-6 h-6" />
               </div>
               <h3 className="text-base font-bold mb-3 text-gray-900">Industry Connections</h3>
               <p className="text-sm leading-relaxed text-gray-600">Strong industry partnerships ensure curriculum stays relevant and students get real-world exposure.</p>
-            </div>
+            </Card>
           </div>
         </div>
       </section>

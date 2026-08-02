@@ -2,6 +2,7 @@
 import { Quote, Users, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
+import { Card } from "@/components/ui/Card";
 
 const testimonials = [
   {
@@ -49,7 +50,7 @@ export default function TestimonialsPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((t, i) => (
-              <div key={i} className="p-8 rounded-3xl bg-gray-50 border border-gray-200">
+              <Card key={i} className="p-8 rounded-3xl bg-gray-50 border border-gray-200">
                 <Quote className="w-8 h-8 mb-6 text-blue-600" />
                 <p className="text-base leading-relaxed mb-6 text-gray-600">
                   {t.quote}
@@ -61,7 +62,7 @@ export default function TestimonialsPage() {
                     <div className="text-xs text-gray-500">{t.role} • {t.year}</div>
                   </div>
                 </div>
-              </div>
+              </Card>
             ))}
           </div>
         </div>

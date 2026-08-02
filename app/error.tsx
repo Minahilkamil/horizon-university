@@ -2,12 +2,13 @@
 
 import Link from 'next/link';
 import { Home, RefreshCw } from 'lucide-react';
+import { Card } from "@/components/ui/Card";
 
 export default function Error({ error, reset }: { error: Error; reset: () => void }) {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-6">
       <div className="max-w-2xl w-full text-center">
-        <div className="bg-white rounded-3xl p-12 border border-gray-200 shadow-xl">
+        <Card className="bg-white rounded-3xl p-12 border border-gray-200 shadow-xl">
           <div className="w-20 h-20 rounded-full mx-auto mb-8 flex items-center justify-center bg-red-100 text-red-600">
             <span className="text-4xl font-bold">500</span>
           </div>
@@ -33,7 +34,7 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
               Go to Homepage
             </Link>
           </div>
-        </div>
+        </Card>
       </div>
     </div>
   );

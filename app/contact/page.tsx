@@ -6,6 +6,7 @@ import {
   Mail, Phone, MapPin, Clock, Send, CheckCircle2,
   Globe, MessageSquare, Users, Home,
 } from "lucide-react";
+import { Card } from "@/components/ui/Card";
 
 const offices = [
   {
@@ -79,7 +80,7 @@ export default function ContactPage() {
 
               <div className="grid sm:grid-cols-3 gap-4 mb-12">
                 {offices.map((office, i) => (
-                  <div key={office.title} className="p-5 rounded-2xl bg-gray-50 border border-gray-200">
+                  <Card key={office.title} className="p-5 rounded-2xl bg-gray-50 border border-gray-200">
                     <h3 className="font-bold text-sm mb-3 text-gray-900">{office.title}</h3>
                     <div className="space-y-2 text-xs">
                       <div className="flex items-center gap-2 text-gray-600">
@@ -92,7 +93,7 @@ export default function ContactPage() {
                         <Clock className="w-3.5 h-3.5" /> {office.hours}
                       </div>
                     </div>
-                  </div>
+                  </Card>
                 ))}
               </div>
 
@@ -117,7 +118,7 @@ export default function ContactPage() {
 
             {/* Form */}
             <div>
-              <div className="p-8 rounded-3xl bg-gray-50 border border-gray-200">
+              <Card className="p-8 rounded-3xl bg-gray-50 border border-gray-200">
                 {status === "sent" ? (
                   <div className="py-12 text-center">
                     <div className="w-20 h-20 rounded-full mx-auto mb-6 flex items-center justify-center bg-blue-100 text-blue-600">
@@ -190,7 +191,7 @@ export default function ContactPage() {
                     </button>
                   </form>
                 )}
-              </div>
+              </Card>
             </div>
           </div>
         </div>

@@ -2,6 +2,7 @@
 import { Image, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
+import { Card } from "@/components/ui/Card";
 
 const galleryImages = [
   {
@@ -82,7 +83,7 @@ export default function GalleryPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {galleryImages.map((img) => (
-              <div
+              <Card
                 key={img.id}
                 className="group rounded-3xl overflow-hidden border border-gray-200 bg-gray-50"
               >
@@ -100,7 +101,7 @@ export default function GalleryPage() {
                   </span>
                   <h3 className="text-base font-semibold text-gray-900">{img.title}</h3>
                 </div>
-              </div>
+              </Card>
             ))}
           </div>
         </div>

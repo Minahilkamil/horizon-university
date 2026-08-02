@@ -3,6 +3,7 @@ import {
   Award, CheckCircle, DollarSign, GraduationCap, ArrowRight 
 } from 'lucide-react';
 import { Button } from "@/components/ui/Button";
+import { Card } from "@/components/ui/Card";
 
 const scholarships = [
   {
@@ -52,7 +53,7 @@ export default function ScholarshipsPage() {
           <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center text-gray-900">Available Scholarships</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {scholarships.map((scholarship, idx) => (
-              <div key={idx} className="p-8 rounded-3xl bg-gray-50 border border-gray-200">
+              <Card key={idx} className="p-8 rounded-3xl bg-gray-50 border border-gray-200">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-2xl flex items-center justify-center bg-blue-100 text-blue-600 flex-shrink-0">
                     <Award className="w-6 h-6" />
@@ -67,7 +68,7 @@ export default function ScholarshipsPage() {
                     <p className="text-xs text-gray-500">Deadline: {scholarship.deadline}</p>
                   </div>
                 </div>
-              </div>
+              </Card>
             ))}
           </div>
         </div>
@@ -79,12 +80,12 @@ export default function ScholarshipsPage() {
           <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center text-gray-900">How to Apply</h2>
           <div className="space-y-6">
             {['1. Fill out the scholarship application form', '2. Submit required documents', '3. Appear for interview (if shortlisted)', '4. Receive decision'].map((step, idx) => (
-              <div key={idx} className="flex items-start gap-4 p-6 rounded-2xl bg-white border border-gray-200">
+              <Card key={idx} className="flex items-start gap-4 p-6 rounded-2xl bg-white border border-gray-200">
                 <div className="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold text-white bg-blue-600 flex-shrink-0">
                   {idx + 1}
                 </div>
                 <p className="text-base text-gray-700">{step}</p>
-              </div>
+              </Card>
             ))}
           </div>
           <div className="text-center mt-10">

@@ -6,6 +6,7 @@ import {
 } from "lucide-react";
 import { programs } from "@/data/programs";
 import { Button } from "@/components/ui/Button";
+import { Card } from "@/components/ui/Card";
 
 export default async function ProgramDetail({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -56,10 +57,10 @@ export default async function ProgramDetail({ params }: { params: Promise<{ slug
                 <h2 className="text-2xl font-bold mb-6 text-gray-900">Curriculum</h2>
                 <div className="grid sm:grid-cols-2 gap-4">
                   {program.courses.map((course, index) => (
-                    <div key={index} className="flex items-center gap-3 p-4 rounded-2xl bg-gray-50 border border-gray-200">
+                    <Card key={index} className="flex items-center gap-3 p-4 rounded-2xl bg-gray-50 border border-gray-200">
                       <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0" />
                       <span className="text-sm text-gray-700">{course}</span>
-                    </div>
+                    </Card>
                   ))}
                 </div>
               </div>
@@ -67,7 +68,7 @@ export default async function ProgramDetail({ params }: { params: Promise<{ slug
 
             {/* Sidebar */}
             <div className="space-y-6">
-              <div className="bg-gray-50 rounded-3xl p-8 border border-gray-200">
+              <Card className="bg-gray-50 rounded-3xl p-8 border border-gray-200">
                 <h3 className="text-lg font-bold mb-6 text-gray-900">Program Details</h3>
 
                 <div className="space-y-6">
@@ -109,7 +110,7 @@ export default async function ProgramDetail({ params }: { params: Promise<{ slug
                     </Link>
                   </Button>
                 </div>
-              </div>
+              </Card>
             </div>
           </div>
         </div>

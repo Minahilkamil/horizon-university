@@ -2,6 +2,7 @@
 import { FlaskConical, Award, Users, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
+import { Card } from "@/components/ui/Card";
 
 const stats = [
   { label: "Research Publications", value: "1500+" },
@@ -89,10 +90,10 @@ export default function ResearchPage() {
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {researchAreas.map((area, i) => (
-              <div key={area.title} className="p-8 rounded-3xl bg-white border border-gray-200">
+              <Card key={area.title} className="p-8 rounded-3xl bg-white border border-gray-200">
                 <h3 className="text-base font-bold mb-3 text-gray-900">{area.title}</h3>
                 <p className="text-sm leading-relaxed text-gray-600">{area.description}</p>
-              </div>
+              </Card>
             ))}
           </div>
         </div>
@@ -108,7 +109,7 @@ export default function ResearchPage() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {labs.map((lab, i) => (
-              <div key={lab.name} className="rounded-3xl overflow-hidden bg-gray-50 border border-gray-200">
+              <Card key={lab.name} className="rounded-3xl overflow-hidden bg-gray-50 border border-gray-200">
                 <div className="aspect-video overflow-hidden">
                   <img src={lab.image} alt={lab.name} className="w-full h-full object-cover" loading="lazy" />
                 </div>
@@ -116,7 +117,7 @@ export default function ResearchPage() {
                   <h3 className="text-base font-bold mb-2 text-gray-900">{lab.name}</h3>
                   <p className="text-sm leading-relaxed text-gray-600">{lab.focus}</p>
                 </div>
-              </div>
+              </Card>
             ))}
           </div>
         </div>

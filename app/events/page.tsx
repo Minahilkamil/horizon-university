@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { Calendar, MapPin, Clock, ArrowRight } from "lucide-react";
 import { events as allEvents } from "@/data/events";
+import { Card } from "@/components/ui/Card";
 
 export default function EventsPage() {
   return (
@@ -25,7 +26,7 @@ export default function EventsPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid gap-8">
             {allEvents.map((event) => (
-              <div key={event.id} className="grid md:grid-cols-[300px_1fr] gap-6 p-6 rounded-3xl bg-gray-50 border border-gray-200">
+              <Card key={event.id} className="grid md:grid-cols-[300px_1fr] gap-6 p-6 rounded-3xl bg-gray-50 border border-gray-200">
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden">
                   <img src={event.image} alt={event.title} className="w-full h-full object-cover" loading="lazy" />
                 </div>
@@ -53,7 +54,7 @@ export default function EventsPage() {
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
-              </div>
+              </Card>
             ))}
           </div>
         </div>

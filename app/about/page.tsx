@@ -5,6 +5,7 @@ import {
   Microscope, TrendingUp, ArrowRight, Sparkles,
 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { Card } from "@/components/ui/Card";
 
 const timeline = [
   { year: "1998", title: "Founded", desc: "Horizon University was established with a vision to deliver world-class education in Pakistan." },
@@ -52,7 +53,7 @@ export default function AboutPage() {
       {/* Stats */}
       <section className="py-8">
         <div className="max-w-5xl mx-auto px-6">
-          <div className="bg-gray-50 rounded-2xl p-6 md:p-8 grid grid-cols-2 md:grid-cols-4 gap-6 border border-gray-200">
+          <Card className="bg-gray-50 rounded-2xl p-6 md:p-8 grid grid-cols-2 md:grid-cols-4 gap-6 border border-gray-200">
             {[
               { icon: <GraduationCap className="w-5 h-5" />, value: 25, suffix: "+", label: "Years of Excellence" },
               { icon: <Users className="w-5 h-5" />, value: 20000, suffix: "+", label: "Alumni Worldwide" },
@@ -69,7 +70,7 @@ export default function AboutPage() {
                   <p className="text-xs mt-1 text-gray-500">{stat.label}</p>
                 </div>
               ))}
-          </div>
+          </Card>
         </div>
       </section>
 
@@ -89,12 +90,12 @@ export default function AboutPage() {
                   Our mission is to provide accessible, high-quality education that equips graduates with the skills, values, and global perspective needed to lead meaningful lives and contribute positively to society.
                 </p>
               </div>
-              <div className="p-6 rounded-2xl bg-gray-50 border border-gray-200">
+              <Card className="p-6 rounded-2xl bg-gray-50 border border-gray-200">
                 <h3 className="text-lg font-bold mb-2 text-gray-900">Our Vision</h3>
                 <p className="text-sm leading-relaxed text-gray-600">
                   To be recognized as South Asia's most innovative and impactful university by 2030, producing graduates who are globally competitive and locally committed.
                 </p>
-              </div>
+              </Card>
             </div>
 
             <div className="relative rounded-3xl overflow-hidden aspect-video">
@@ -121,13 +122,13 @@ export default function AboutPage() {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {values.map((v, i) => (
-                <div key={v.title} className="p-7 rounded-2xl h-full bg-white border border-gray-200">
+                <Card key={v.title} className="p-7 rounded-2xl h-full bg-white border border-gray-200">
                   <div className="w-12 h-12 rounded-2xl mb-5 flex items-center justify-center bg-blue-100 text-blue-600">
                     {v.icon}
                   </div>
                   <h3 className="text-base font-bold mb-2 text-gray-900">{v.title}</h3>
                   <p className="text-sm leading-relaxed text-gray-600">{v.desc}</p>
-                </div>
+                </Card>
               ))}
           </div>
         </div>
@@ -149,11 +150,11 @@ export default function AboutPage() {
                   <div key={item.year} className={`flex gap-6 items-start md:items-center ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}>
                     {/* Content */}
                     <div className={`flex-1 ${i % 2 === 0 ? "md:text-right" : "md:text-left"}`}>
-                      <div className="p-5 rounded-2xl bg-gray-50 border border-gray-200 inline-block w-full">
+                      <Card className="p-5 rounded-2xl bg-gray-50 border border-gray-200 inline-block w-full">
                         <span className="text-xs font-bold text-blue-600">{item.year}</span>
                         <h3 className="text-base font-bold mt-1 text-gray-900">{item.title}</h3>
                         <p className="text-sm mt-1 text-gray-600">{item.desc}</p>
-                      </div>
+                      </Card>
                     </div>
                     {/* Dot */}
                     <div className="relative z-10 w-12 h-12 rounded-full flex items-center justify-center shrink-0 text-white text-xs font-bold bg-blue-600">
@@ -178,12 +179,12 @@ export default function AboutPage() {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {leadership.map((person, i) => (
-                <div key={person.name} className="p-6 rounded-2xl text-center bg-white border border-gray-200">
+                <Card key={person.name} className="p-6 rounded-2xl text-center bg-white border border-gray-200">
                   <img src={person.image} alt={person.name} className="w-20 h-20 rounded-full object-cover mx-auto mb-4" />
                   <h3 className="text-base font-bold text-gray-900">{person.name}</h3>
                   <p className="text-xs font-semibold mt-1 mb-2 text-blue-600">{person.role}</p>
                   <p className="text-xs leading-relaxed text-gray-600">{person.desc}</p>
-                </div>
+                </Card>
               ))}
           </div>
         </div>
