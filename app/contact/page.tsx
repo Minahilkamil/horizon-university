@@ -7,6 +7,9 @@ import {
   Globe, MessageSquare, Users, Home,
 } from "lucide-react";
 import { Card } from "@/components/ui/Card";
+import { Input } from "@/components/ui/Input";
+import { Textarea } from "@/components/ui/Textarea";
+import { Label } from "@/components/ui/Label";
 
 const offices = [
   {
@@ -138,8 +141,8 @@ export default function ContactPage() {
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
-                      <label className="block text-sm font-semibold mb-2 text-gray-700">Full Name</label>
-                      <input
+                      <Label className="block text-sm font-semibold mb-2 text-gray-700">Full Name</Label>
+                      <Input
                         required
                         type="text"
                         value={form.name}
@@ -149,8 +152,8 @@ export default function ContactPage() {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-semibold mb-2 text-gray-700">Email Address</label>
-                      <input
+                      <Label className="block text-sm font-semibold mb-2 text-gray-700">Email Address</Label>
+                      <Input
                         required
                         type="email"
                         value={form.email}
@@ -160,8 +163,8 @@ export default function ContactPage() {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-semibold mb-2 text-gray-700">Subject</label>
-                      <input
+                      <Label className="block text-sm font-semibold mb-2 text-gray-700">Subject</Label>
+                      <Input
                         required
                         type="text"
                         value={form.subject}
@@ -171,8 +174,8 @@ export default function ContactPage() {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-semibold mb-2 text-gray-700">Message</label>
-                      <textarea
+                      <Label className="block text-sm font-semibold mb-2 text-gray-700">Message</Label>
+                      <Textarea
                         required
                         rows={5}
                         value={form.message}

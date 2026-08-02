@@ -8,6 +8,10 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
+import { Input } from "@/components/ui/Input";
+import { Textarea } from "@/components/ui/Textarea";
+import { Label } from "@/components/ui/Label";
+import { Select } from "@/components/ui/Select";
 
 type FormData = {
   firstName: string; lastName: string; email: string; phone: string;
@@ -126,43 +130,43 @@ export default function AdmissionsPage() {
                   <div key="step0" className="space-y-5">
                     <div className="grid md:grid-cols-2 gap-5">
                       <div>
-                        <label className="text-xs font-semibold block mb-2 text-gray-600">First Name *</label>
-                        <input {...register("firstName", { required: true })} className="w-full px-4 py-3 rounded-xl text-sm outline-none bg-gray-50 border border-gray-200 text-gray-900" />
+                        <Label className="text-xs font-semibold block mb-2 text-gray-600">First Name *</Label>
+                        <Input {...register("firstName", { required: true })} className="w-full px-4 py-3 rounded-xl text-sm outline-none bg-gray-50 border border-gray-200 text-gray-900" />
                         {errors.firstName && <p className="text-xs text-red-500 mt-1">Required</p>}
                       </div>
                       <div>
-                        <label className="text-xs font-semibold block mb-2 text-gray-600">Last Name *</label>
-                        <input {...register("lastName", { required: true })} className="w-full px-4 py-3 rounded-xl text-sm outline-none bg-gray-50 border border-gray-200 text-gray-900" />
+                        <Label className="text-xs font-semibold block mb-2 text-gray-600">Last Name *</Label>
+                        <Input {...register("lastName", { required: true })} className="w-full px-4 py-3 rounded-xl text-sm outline-none bg-gray-50 border border-gray-200 text-gray-900" />
                       </div>
                     </div>
                     <div className="grid md:grid-cols-2 gap-5">
                       <div>
-                        <label className="text-xs font-semibold block mb-2 text-gray-600">Email *</label>
-                        <input type="email" {...register("email", { required: true, pattern: /^\S+@\S+$/i })} className="w-full px-4 py-3 rounded-xl text-sm outline-none bg-gray-50 border border-gray-200 text-gray-900" />
+                        <Label className="text-xs font-semibold block mb-2 text-gray-600">Email *</Label>
+                        <Input type="email" {...register("email", { required: true, pattern: /^\S+@\S+$/i })} className="w-full px-4 py-3 rounded-xl text-sm outline-none bg-gray-50 border border-gray-200 text-gray-900" />
                       </div>
                       <div>
-                        <label className="text-xs font-semibold block mb-2 text-gray-600">Phone *</label>
-                        <input {...register("phone", { required: true })} className="w-full px-4 py-3 rounded-xl text-sm outline-none bg-gray-50 border border-gray-200 text-gray-900" />
+                        <Label className="text-xs font-semibold block mb-2 text-gray-600">Phone *</Label>
+                        <Input {...register("phone", { required: true })} className="w-full px-4 py-3 rounded-xl text-sm outline-none bg-gray-50 border border-gray-200 text-gray-900" />
                       </div>
                     </div>
                     <div className="grid md:grid-cols-2 gap-5">
                       <div>
-                        <label className="text-xs font-semibold block mb-2 text-gray-600">Date of Birth *</label>
-                        <input type="date" {...register("dob", { required: true })} className="w-full px-4 py-3 rounded-xl text-sm outline-none bg-gray-50 border border-gray-200 text-gray-900" />
+                        <Label className="text-xs font-semibold block mb-2 text-gray-600">Date of Birth *</Label>
+                        <Input type="date" {...register("dob", { required: true })} className="w-full px-4 py-3 rounded-xl text-sm outline-none bg-gray-50 border border-gray-200 text-gray-900" />
                       </div>
                       <div>
-                        <label className="text-xs font-semibold block mb-2 text-gray-600">Gender *</label>
-                        <select {...register("gender", { required: true })} className="w-full px-4 py-3 rounded-xl text-sm outline-none bg-gray-50 border border-gray-200 text-gray-900">
+                        <Label className="text-xs font-semibold block mb-2 text-gray-600">Gender *</Label>
+                        <Select {...register("gender", { required: true })} className="w-full px-4 py-3 rounded-xl text-sm outline-none bg-gray-50 border border-gray-200 text-gray-900">
                           <option value="">Select</option>
                           <option>Male</option>
                           <option>Female</option>
                           <option>Other</option>
-                        </select>
+                        </Select>
                       </div>
                     </div>
                     <div>
-                      <label className="text-xs font-semibold block mb-2 text-gray-600">Address</label>
-                      <input {...register("address")} className="w-full px-4 py-3 rounded-xl text-sm outline-none bg-gray-50 border border-gray-200 text-gray-900" />
+                      <Label className="text-xs font-semibold block mb-2 text-gray-600">Address</Label>
+                      <Input {...register("address")} className="w-full px-4 py-3 rounded-xl text-sm outline-none bg-gray-50 border border-gray-200 text-gray-900" />
                     </div>
                   </div>
                 )}
@@ -172,19 +176,19 @@ export default function AdmissionsPage() {
                     <div>
                       <h3 className="text-sm font-bold mb-4 flex items-center gap-2 text-gray-900"><BookOpen className="w-4 h-4 text-blue-600" /> Matriculation</h3>
                       <div className="grid md:grid-cols-2 gap-4">
-                        <input {...register("matricBoard")} placeholder="Board Name" className="w-full px-4 py-3 rounded-xl text-sm outline-none bg-gray-50 border border-gray-200 text-gray-900" />
-                        <input {...register("matricYear")} placeholder="Year" className="w-full px-4 py-3 rounded-xl text-sm outline-none bg-gray-50 border border-gray-200 text-gray-900" />
-                        <input {...register("matricMarks")} placeholder="Obtained Marks" className="w-full px-4 py-3 rounded-xl text-sm outline-none bg-gray-50 border border-gray-200 text-gray-900" />
-                        <input {...register("matricTotal")} placeholder="Total Marks" className="w-full px-4 py-3 rounded-xl text-sm outline-none bg-gray-50 border border-gray-200 text-gray-900" />
+                        <Input {...register("matricBoard")} placeholder="Board Name" className="w-full px-4 py-3 rounded-xl text-sm outline-none bg-gray-50 border border-gray-200 text-gray-900" />
+                        <Input {...register("matricYear")} placeholder="Year" className="w-full px-4 py-3 rounded-xl text-sm outline-none bg-gray-50 border border-gray-200 text-gray-900" />
+                        <Input {...register("matricMarks")} placeholder="Obtained Marks" className="w-full px-4 py-3 rounded-xl text-sm outline-none bg-gray-50 border border-gray-200 text-gray-900" />
+                        <Input {...register("matricTotal")} placeholder="Total Marks" className="w-full px-4 py-3 rounded-xl text-sm outline-none bg-gray-50 border border-gray-200 text-gray-900" />
                       </div>
                     </div>
                     <div>
                       <h3 className="text-sm font-bold mb-4 flex items-center gap-2 text-gray-900"><BookOpen className="w-4 h-4 text-blue-600" /> Intermediate / A-Levels</h3>
                       <div className="grid md:grid-cols-2 gap-4">
-                        <input {...register("interBoard")} placeholder="Board Name" className="w-full px-4 py-3 rounded-xl text-sm outline-none bg-gray-50 border border-gray-200 text-gray-900" />
-                        <input {...register("interYear")} placeholder="Year" className="w-full px-4 py-3 rounded-xl text-sm outline-none bg-gray-50 border border-gray-200 text-gray-900" />
-                        <input {...register("interMarks")} placeholder="Obtained Marks" className="w-full px-4 py-3 rounded-xl text-sm outline-none bg-gray-50 border border-gray-200 text-gray-900" />
-                        <input {...register("interTotal")} placeholder="Total Marks" className="w-full px-4 py-3 rounded-xl text-sm outline-none bg-gray-50 border border-gray-200 text-gray-900" />
+                        <Input {...register("interBoard")} placeholder="Board Name" className="w-full px-4 py-3 rounded-xl text-sm outline-none bg-gray-50 border border-gray-200 text-gray-900" />
+                        <Input {...register("interYear")} placeholder="Year" className="w-full px-4 py-3 rounded-xl text-sm outline-none bg-gray-50 border border-gray-200 text-gray-900" />
+                        <Input {...register("interMarks")} placeholder="Obtained Marks" className="w-full px-4 py-3 rounded-xl text-sm outline-none bg-gray-50 border border-gray-200 text-gray-900" />
+                        <Input {...register("interTotal")} placeholder="Total Marks" className="w-full px-4 py-3 rounded-xl text-sm outline-none bg-gray-50 border border-gray-200 text-gray-900" />
                       </div>
                     </div>
                     <div className="p-4 rounded-xl flex items-start gap-3 bg-blue-50 border border-blue-200">
@@ -200,31 +204,31 @@ export default function AdmissionsPage() {
                 {step === 2 && (
                   <div key="step2" className="space-y-5">
                     <div>
-                      <label className="text-xs font-semibold block mb-2 text-gray-600">Select Program *</label>
-                      <select {...register("program", { required: true })} className="w-full px-4 py-3 rounded-xl text-sm outline-none bg-gray-50 border border-gray-200 text-gray-900">
+                      <Label className="text-xs font-semibold block mb-2 text-gray-600">Select Program *</Label>
+                      <Select {...register("program", { required: true })} className="w-full px-4 py-3 rounded-xl text-sm outline-none bg-gray-50 border border-gray-200 text-gray-900">
                         <option value="">Choose a program</option>
                         {programs.map((p) => <option key={p} value={p}>{p}</option>)}
-                      </select>
+                      </Select>
                     </div>
                     <div>
-                      <label className="text-xs font-semibold block mb-2 text-gray-600">Preferred Campus *</label>
+                      <Label className="text-xs font-semibold block mb-2 text-gray-600">Preferred Campus *</Label>
                       <div className="grid gap-3">
                         {campuses.map((c) => (
-                          <label key={c} className="flex items-center gap-3 p-4 rounded-xl cursor-pointer bg-gray-50 border border-gray-200">
-                            <input type="radio" value={c} {...register("campus")} className="sr-only peer" />
+                          <Label key={c} className="flex items-center gap-3 p-4 rounded-xl cursor-pointer bg-gray-50 border border-gray-200">
+                            <Input type="radio" value={c} {...register("campus")} className="sr-only peer" />
                             <div className="w-5 h-5 rounded-full border-2 peer-checked:border-blue-600 flex items-center justify-center border-gray-300">
                               <div className="w-2.5 h-2.5 rounded-full bg-blue-600 scale-0 peer-checked:scale-100" />
                             </div>
                             <div>
                               <p className="text-sm font-semibold text-gray-900">{c}</p>
                             </div>
-                          </label>
+                          </Label>
                         ))}
                       </div>
                     </div>
                     <div>
-                      <label className="text-xs font-semibold block mb-2 text-gray-600">Additional Notes</label>
-                      <textarea {...register("notes")} rows={3} className="w-full px-4 py-3 rounded-xl text-sm outline-none resize-none bg-gray-50 border border-gray-200 text-gray-900" />
+                      <Label className="text-xs font-semibold block mb-2 text-gray-600">Additional Notes</Label>
+                      <Textarea {...register("notes")} rows={3} className="w-full px-4 py-3 rounded-xl text-sm outline-none resize-none bg-gray-50 border border-gray-200 text-gray-900" />
                     </div>
                   </div>
                 )}

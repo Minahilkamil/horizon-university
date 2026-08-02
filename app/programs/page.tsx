@@ -7,6 +7,8 @@ import {
   Search, GraduationCap, Clock, ArrowRight,
 } from "lucide-react";
 import { programs } from "@/data/programs";
+import { Input } from "@/components/ui/Input";
+import { Select } from "@/components/ui/Select";
 
 const departments = ["All Departments", "Computer Science", "Engineering", "Business", "Sciences", "Humanities"];
 const levels = ["All Levels", "Bachelor", "Master", "PhD"];
@@ -46,7 +48,7 @@ export default function ProgramsPage() {
           <div className="flex flex-col md:flex-row gap-4">
             <div className="relative flex-1">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" />
-              <input
+              <Input
                 type="text"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
@@ -54,20 +56,20 @@ export default function ProgramsPage() {
                 className="w-full pl-10 pr-4 py-3 rounded-xl text-sm outline-none bg-gray-50 border border-gray-200 text-gray-900"
               />
             </div>
-            <select
+            <Select
               value={department}
               onChange={(e) => setDepartment(e.target.value)}
               className="px-4 py-3 rounded-xl text-sm outline-none cursor-pointer bg-gray-50 border border-gray-200 text-gray-900"
             >
               {departments.map((d) => <option key={d} value={d}>{d}</option>)}
-            </select>
-            <select
+            </Select>
+            <Select
               value={level}
               onChange={(e) => setLevel(e.target.value)}
               className="px-4 py-3 rounded-xl text-sm outline-none cursor-pointer bg-gray-50 border border-gray-200 text-gray-900"
             >
               {levels.map((l) => <option key={l} value={l}>{l}</option>)}
-            </select>
+            </Select>
           </div>
         </div>
       </section>

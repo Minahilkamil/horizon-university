@@ -4,6 +4,7 @@ import {
 } from 'lucide-react';
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
+import { Input } from "@/components/ui/Input";
 
 export default function LibraryPage() {
   return (
@@ -76,7 +77,7 @@ export default function LibraryPage() {
               <h2 className="text-2xl font-bold mb-6 text-gray-900">Search the Catalog</h2>
               <Card className="p-8 rounded-3xl bg-gray-50 border border-gray-200">
                 <div className="flex gap-3">
-                  <input 
+                  <Input 
                     type="text" 
                     placeholder="Search for books, journals, authors..." 
                     className="flex-1 px-5 py-3 rounded-xl text-sm outline-none bg-white border border-gray-300 text-gray-900 placeholder:text-gray-500" 
